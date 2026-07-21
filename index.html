@@ -569,8 +569,238 @@ body.modalOpen{overflow:hidden}
 .floatingChartFilter button:hover{background:#D4EDFC}
 @media(max-width:640px){.floatingChartFilter{left:10px;right:10px;bottom:10px;max-width:none;justify-content:space-between;border-radius:14px}.floatingChartFilter span{max-width:calc(100vw - 92px);font-size:11px}.floatingChartFilter button{height:32px;min-width:34px}}
 
-</style></head><body class="executive-dashboard"><div class="app"><main class="main"><header class="executiveTop"><div class="brandBlock"><div class="heroIcon versionLogoBtn" role="button" tabindex="0" aria-label="نمایش تغییرات آخرین نسخه" title="نمایش تغییرات آخرین نسخه" onclick="openVersionModal()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVersionModal()}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEUCAYAAADX4qgfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABvFSURBVHhe7Z13cBXHlod3a/dt1W7tVm3tH1u1oep53/MjZySiABuRwRYZgcjZAZywScY8cs7wAJGxydlgG0QOIiOCAYFEFMkGhJBAAoyX3ndmGxmhM9K90p175/T8vqqvXC5jNKen+6d7p3u6/0YBAIANCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAgAgC0ICACALQgIAIAtCAghXL1yRe3ft0+tWL5cTZsyVY0aMUJ9OWiw+uzjT9T7vXqrLh07qbat26ioxk1UvchIVaNadRVWrrwqWbSY+uPv31AlihS1/r1m9QjVoE5d1TyqqWrftp3q2a27+rhvXzWo/wA1cvhwNXXyFLVk0SL13ZYt6uiRI+rK5cvqUUaGvgrgNRAQLoOCYMP69WrEsOGqVfMWqmp4JWuAh9qypUqrmLZt1dhRo9X6devUhcREfcXAZBAQIeThw4dq186d1m/tTu07qPKly7CD083SJ5aBX/RXS5csUSeOH1eZmZm6OmACCIggcvrUKbV44ULrI/1bETXYAWeCrVu0VLNmzFTnzp7TlQOpICAc5PKly+qbpV+r3j17qnICPx0Ewsph4WrwgIEqbus2lZWVpVsGSAEBEWASTiSooUOGqCp/HRjcgPG69FWKHoLevnVLtxhwMwiIAJCSkmLNLNSu9RY7KCDvO40aqdg5cxAWLgYBUUAy0jPUimXLVMtmzdjOD/2TZmzWrFqtnj59qlsYuAEEhJ9sj4uz1h1wnRwWXprJofUYNN0LQg8CwgdS799X48eOEzkNKdkO7WLUth+2ql9//VXfCRBsEBB5cOvmTeuBI61C5DowDI70wHfm9OnW1zoQXBAQDElJSdZaBa6zwtBJqzknT5yk0tPT9Z0CToOAeIWzZ89aaxa4zgndY5kSJa2vfGlpafrOAadAQPwVWrvQtVMntjNC91qqWHE1euRI6xkRcAZPBwStdKSFO1zng7Kkl9vwiSLweDIgHj9+rMaMHMV2NCjXCmXKWi+NYdYjcHguIL7duMk1r1BDZ6xbO1IdPnRY33FQGDwTENeuXVMx0dFsh4Jm2qt7D3X9+nXdA0BB8ERATJowge1A0HyL/6mINeOBfSoKhtEBcTA+3tpijes40FtWq1TZ2tAG+IeRAUELabDQCb7um2/8j5o4frx6/vy57ikgP4wLiPgDB6xNSrgOAiFJr5nj2YRvGBMQ9JowvTfBdQgIX5cWWa1csUL3HmCHEQGReP68ql2zFtsRIMzLHl274d2OPBAfEHHb4rLPfoCwINK6GNpQGORGdEDQK8DcDYfQX4u9+SfrsCCQE5EBQc8bPnzvffZGQ1gYac3EixcvdE8D4gIiNTVVRTV5h725EAbCrp07W+/rAGEBQedERlStxt5UCAMpvc9xI+WG7nneRUxAHDt61NpRiLuZEDoh7UHq9dWXIgJi86Zv2RsIodMW/eObausPP+ie6D1cHxDTp05lbxyEwXTF8uW6R3oLVwdE/88/Z28WhKGQfll5DdcGBL3Lz90kCEPpoP4DPDUN6rqAePTokXUMG3dzIHSDfT/s45k3Ql0VELQAqlWz5uxNgdBN0mbHT5480T3XXFwVENhhGkoypm1b4z9JuCYgcCAulCgt+TcZVwTE55/1YxsfQgnS+xumEvKAmDp5CtvoEEpy1cqVukebRUgDYsP69WxjQyhN2u9ye1yc7tnmELKA2LN7D9vQEEqV9pSgd4ZMIiQBQadoFy9SlG1kCCVLLxReSr6ke7p8gh4Qt2/fVuHlK7CNC6EJvl2jpspIz9A9XjZBD4h3GzVmGxVCk+zQLsaIJdlBDYgv+mE6E3pHE17uClpA0OuyXCNCaLIH9u/XI0AmQQmIM6dPs40HAytt/1+hTFnrHEo6J6RB3Xqq6TvvquhWra1/1o+so2pUq67CypVXJfCQOCjSQ8tbN2/qkSAPxwOCNv+sFYEDdANp4wYNrTcKZ82YqXbt3KlSUlJ0a/vPtWvXrOMKVyxbZq0I7PvBhyqqcRP258KC2bBefZWVlaVbXBaOBwQ2fSmclSqGqY/69LG+op0/d163anBITk62tlubNGGCdQIVHVfHXSPM30/6fqRbVRaOBgT9duMaC9obXqGi6vP+B2rZ19+oy5cu65Z0D7t37bJCn76mcNcP7d3y7WbdinJwLCB++uknVa50GbahYE5pXciIYcPV8WPHdOvJ4GB8vHVgcsWy5di6YE7p+VBaWppuPRk4FhDt27ZjGwn+v7SlOg2uQwcP6RaTzaH4gwgLH5T2ergjAUFvtnGNA99QbVq2Ujt37NAtZSZ79+xVnTt0ZOuHb4jaRj/gAUFfLfAwK7ddO3VSCScSdCt5A6oXnyRzK+mrRsADgs415BrFq9JOWcGefXAbFBTt2kSz7eNVaZpaAgENCOzv8Jsx0dGunIUIJTu2b7cWcHHt5UVpls/tBCwg6CMTPXjjGsJL0szN2tVrdKsAjoXzF6iyJUux7eclq4SFq8zMTN0q7iRgAfHnIV+xjeAlaTFMamqqbhGQF/QL5ctBg9l29JK05aKbCUhAJCUlscV7RXq/Yd/evbo1gD/Q84m3Imqw7eoF6YH+/Xv3dGu4j4AEBL0MxBXvBWlHbqnr7N0EvQfCta8XHDxgoG4F91HogIjbFscWbbr0HVri0lk3E7d1m/X2I9feJksb3l657M4H2oUOCC9+PGzRtJnoV3jdDLVr86imbLubbPcuXXULuItCBcTyb5axxZosvdkInIWOs6MHvlz7m+yJ48d1C7iHAgcEHbRLryJzhZoo7cK9Z9duXT0IBvNiY62P39z9MFHar9VtFDgg5s6ezRZporQ0lnbFAsGH3lvx0u5XP3z/va7cHRQoIGhLb688TKItzGnXJRA6zp0955mjEhrVb6CrdgcFCogZ06axxZlms3ej1IMHD3TVIJTcvHHTCmvuPpkm7bPhFgoUEF549tAxpr31nAW4BwrrBnXqsvfLJOnNX7fgd0CsW7uWLcokaTdot6+R9yq0nUDV8ErsfTPJxPPueAPY74Bo0rARW5ApUue7d9e9S1+Bst6SNX07Q7dscutXQBw5fJgtxhSp0+EVbRmcOnnS+AOg3bAYz6+A6N2zJ1uIKZ44cUJXCiRAU6DcfTTFYUP/rCsNHT4HxO1bt9giTPG7LVt0pUASc/5i7noc+oQU6lPCfQ6IKZMms0WY4NhRo3WVQCL0Ri13X02QDkwKJT4HhKlTm3RmJZDNL7/8Yi1T5u6vdFs2a6arDA0+BQRt081dvHTpoeSdO3d0lUAyNP1JS+K5+yzd69ev6yqDj08BQYuGuAuX7p7de3SFwARols3El7smjh+vKww++QYErQngLlq6eO5gJiY+K6teuYp68eKFrjC45BsQ82PnsRct2XcaNdLVAdOgvSQaN2jI3nfJ7t+3T1cYXPINCHqIx12wZH88c0ZXB0wkOTlZFfnDH9l7L9VQrazMMyBMXPsw7KuhujpgMtOnTmXvv2QfPXqkqwseeQbErBkz2QuVauWwcPX48WNdHTCZZ0+fWccRcP1AqqHYJDnPgKDNK7gLlaqkU5VB4aHVsVw/kCotCAs2tgFB88rcRUqVjqMH3oN2IOf6g0TDK1TUVQUP24BYtXIle5FSvXrliq4MeAl6IM31B6leSEzUlQUH24CgY+u5C5Ron/c/0FUBL9KpfQe2X0g0ds4cXVVwsA2IkkWLsRco0aSLF3VVwIvQeRNcv5BoTNu2uqrgwAbEsaNH2YuTaI+u3XRVwMuYcn4sre8I5naIbEDQkeTcxUmUdh4CgFYicv1Dort27tRVOQ8bEPQxhrswaXZoF6MrAkCpOm/XZvuJNIcOGaIrch42IEx5/oC3NcGrmLIjezAP18kVEKdPnWIvSpp0EhMAr0IvctFaAq6/SJJeaadNcoJBroBYMG8+e1HSHDt6jK4IgN+YPGEi21+kGawNlnMFxHu9erEXJM1LyZd0RQD8xrWrV9n+Is0lixbpipwlV0BEVKnKXpAkoxo30dUAkJuG9eqz/UaS/T75VFfjLDkCIj09nb0YaQYrXYFMTHhLuX5kHV2Ns+QIiEPxB9mLkebDhw91RQDkJiUlhe030gzGgqkcAbFw/gL2QiTZqnkLXQ0A9tSLjGT7jySPHjmiq3GOHAFhwgEktGkpAPkxbsxYtv9IkmYcnSZHQJhwcjdtfQ5AfpjwAteg/gN0Nc6RIyC4i5AmAL5SpkRJtg9JMRibIGUHxIMHD9iLkCR2jQL+0L5tO7YfSbFu7UhdiXNkB8S5s2fZi5BksDfTALKZMG4c24+kSO9MOU12QJhw/ubJBLzaDXwnblsc248kmZqaqqtxhuyAWLhA/hQntrQH/nD37l22H0ny7F8/+TtJdkCMHDacvQApVgkL15UA4Duli5dg+5MU47Zu05U4Q3ZAfNynL3sBUmzXJlpXAoDvtG7Rku1PUly0YKGuxBmyA6JzB9k7/w4eOEhXAoDv0FoCrj9JcdSIEboSZ8gOiKgm77AXIMVgrCoD5iH99QKnj3TIDoha1SPYC5BiMDfyBOZA3+G5/iRFOvPDSbIDQvrDGpycBQpCwokEtj9JsWWzZroSZzAmIJyeDwZmciPlBtufpNigTl1diTMYExBZWVm6EgB8hzZ/5fqTFCOqVtOVOIMxAQFAQSlbshTbpyRYvnQZXYUzGBEQxYsU1VUA4D81qlVn+5UEaQt8JzEiIJxOUWA2dBAN16+k6OTXayMComp4JV0FAP7TpmUrtl9J8d7de7qSwGNEQNSuWUtXAYD/dO/Sle1XUnRyih8B4QFOXr2v/rblHGjj/B2JuqXA62QHRCXBZxbSYT8gbyoPWM8ODjhHTdlyRrcSeJ3sgKDXpbnBJ0E6kBXkzYoDyezggHPUmPUJupXA62QHRHXBR+6VLVVaVwHseP7r/6r/7vk1O0C87tBVx3QrgdfJDojIt95mB58UQf7Qb0pugHhdfIKwJzsg3m3UmB14Uky9f19XAuxIffRU/VO7+ewg8bJ4BmFPdkBEt2rNDjwpJl28qCsBedFr7l52kHjZ2dvO6dYBr5MdEL179GQHnhSxH4RvnL/xgB0kXpYe4AKe7IAY8PkX7MCTIo789536I7awA8WrHki8o1sGvE52QIwZNYodeFIcMWy4rgTkxw8JKexA8apXf87QLQNeJzsgZs+ezQ48Kfbq3kNXAvLjxQulin+0kh0sXhTYkx0Qq1asZAeeFBvWq68rAb5AD+a4weI1f9/7G90igCM7IHbv2sUOPCmWKlZcVwJ8IfPpc/VvnRexg8ZL1vpqk24RwJEdEBcSE9mBJ8nkZDyN9of+Xx9mB42XpGlfYE92QGRkZLCDTpIrli/X1QBfuHH/sfr71nPZgeMVsQYib7IDgqDjxLmBJ8V+n3yqKwG+0mbydnbgeMVDF3/SLQE4cgREg7r12IEnxbdr1NSVAF/ZffYWO3C84pNnv+qWABw5AqJb5y7swJOkk9tvmYiXpzzxgDJ/cgTE2FGj2UEnye+/+05XA3zFq1Oe9JAW5E2OgNiwfj076CT55aDBuhrgK16d8tx49KpuAWBHjoA4f+48O+gkWaFMWV0N8AevTXn+Q3SsSs98pqsHduQICIIbdNKMP3BAVwN8xWtTnvTCGsifXAEhfSaDHDxgoK4G+IOXpjyx/sE3cgXEZx9/wg46SeJrRsGgNQHcYDLN37WJVXfTn+iqQV7kCoilS5awg06a+/ZiCW1B8ML2+FHjtupqQX7kCogzp0+zA06aWFVZMLywPf6GI5i98JVcAUFwA06iaWlpuiLgK6Zvj/+vHRfqSoEvsAHRqnkLdsBJc9qUqboi4A8mb4+PxVH+wQbE6JEj2QEnTTysLBimbo9P07g0nQt8hw2IHdu3swNOoqtXrtJVAX8wcXt8msYF/sEGRGZmJjvYJFovMlJXBfzBxBPBz1xP1dUBX2EDgpB+kM6r7tm9R1cF/MGkKU98eigYtgExa8ZMdrBJlFaHAv8xZcrz71rPVVewtX2BsA2IH8+cYQebVNeuXqMrA75iypRnt7/gE2RBsQ0IIqxceXawSbRKWLh6+vSprgz4ivQpz39pv0Ddw7LqApNnQNDeCtxgk+rM6dN1ZcBXpE954mj/wpFnQBw6eIgdaFKlszPu38OWdP4idcqzWN+V6ukv2HOyMOQZEER4+QrsYJPq559+pisDviL1RHDakBcUjnwDYuiQIexAk+yunTt1dcBXpJ0IjiXVgSHfgDh65Ag7yCRbOSxcPXz4UFcIfEHSieCVBqxTz57/r75yUBjyDQiiVkQEO9AkSxvjAN+Rsj0+PVDFcf6Bw6eAmDFtGjvIpIuvGv4hYXv8ZftwPmsg8Skgbt+6xQ4w6dID2AcPHugqQX64fXv8jxbG6ysFgcKngCA6d+jIDjLp0t4XwHdoEHKDM9TWHLJJ/YLnDgHH54DYsnkzO8BMcOAX/XWVID/cOOX5Xz2XqjtpmfoKQSDxOSAI2oCFG2AmuHghtiLzFTdNef5H96VWaAFn8Csgpk6ewg4uUzwUf1BXCvLCLVOe9DwE4eAsfgUELVPmBpYpli1ZSl2+dFlXC+xww5TnP7efr45fvquvCDiFXwFBfNy3Lzu4TLFSxTCEhA+EcsqTdqY+kvyzvhLgJH4HxMmEk+zAMkl6zR0hkTehmvL8966LsXVcEPE7IIiWzZqxA8sk6YFs4vnzumLAEewTwd/8cLlKvoMl8sGkQAFBx9pxg8o0y5cuo86dxSGvdgTzRPCyn61RPz/M0j8ZBIsCBQTRoqn5nyLIsqVKWy+sAZ5gnAjeeeZulfXsuf6JIJgUOCD27vHGp4iXbt70ra4cvIqTJ4L/Y7t5atGuC/ongVBQ4IAg3m3UmB1MpjppwgRdOXgVJ7bHL9p3BR5GuoBCBQQtLOIGksl+0Ps9XT14SaC3x++74IB69OQX/beDUFKogCB6dO3GDiSTbR7VVN25c0e3ACD+s8dSdrD7I71TsePMTf03AjdQ6IC4dvUqO4hMlx5ebtq4UbcCGLrqGDvofZUedqY9fqb/NuAWCh0QhCmngRfE93r1Uunp6bolvAtNeXIDPz//8P4ytROfGlxLQALiUUaGtWaAG0BekPa4PHIYm6T6M+VJB9qM23gS29K7nIAEBLFm1Wp28HjJwQMGqtRU7z55T7hyjw2D1+0+ew8WPQkhYAFBtGrWnB04XpKeTcyLjdUt4j3ymvJsMuZ7dfEWlkpLIqABQS84cYPGi9auWUvFbYvTLeMdlu/PPeUZOWyzOpCIWR+JBDQgiPFjx7EDxqvGREerA/v369Yxn5cngv+uTayKmbbD+toB5BLwgHjy5ImqUa06O1i8LH2iWLJokfVA12QuJCaqJVsOqlup2CPSBAIeEMTB+Hh2kMA3VPEiRa1Nck16lTwjPUOtXrnKWkBGNXbr3EX/FyAdRwKCGDxwUK7BAXMa1biJmh87T/38s7zdkVJSUlTs3Lmqbes2bG03Um7oPwkk41hAPH78WFWrVJntPDC3HWPaq3Vr1lrt5lbS0tLU10uW+rRh0LgxY/X/BSTjWEAQ9HCO6zwwb7t36api58xRx44e1S0ZOk6fOqVmzpihWrdoyV6rnbRtH5CPowFB0OIhrgNB36Xf2GNHjbamTa9euaJbNvDcunlTbfthqzUTRbMvtMs3dz2+umH9ev03A6k4HhCE1/aNCIaRb71tfdKg4Fj+zTLrwfD5c+etc1QzM/OeQaDVnrT58MYNG6yzTuihYniFiuzPKYy0cA7IJigBQb+ZvPyuRqisEhauGtSpa309aFivvqoaXon9c06KjX9lE5SAIOhlJq4DQbOlr5hALkELCGLu7NlsJ4LmWqJIUeMXh5lMUAOC+PC999mOBM11yeLF+u4DaQQ9IIim77zLdiRoprTMHMgkJAGRev++iqhSle1M0EyxoY5MQhIQRFJSkvX9lOtM0Dz7fvChvvNAEiELCGL3rl1sZ4Jm+uDBA33ngRRCGhDEimXL2M4EzXPWjJn6rgMphDwgiAnjsMmMF6TNfYEsXBEQBH1H5ToVNMsd27frOw4k4JqAIOjdAq5TQXPs0rGTvttAAq4KCKJ3z55sx4LmeO3aNX23gdtxXUAQ/T75lO1Y0Az/POQrfaeB23FlQBCD+g9gOxeUb8mixfB+hhBcGxDExPHj2Q4G5btowUJ9l4GbcXVAEPSiD9fBoGzfrlFT32HgZlwfEMTmTd+ynQzKdtfOnfoOA7ciIiCIfXv3qtLFS7AdDcqUdvIG7kZMQBAXL1xQNatHsJ0NyhRTnu5GVEAQDx8+tD2sBcrzqy+/1HcWuBFxAfGSoUOGsB0OyhJTnu5GbEAQa1atZjsdlCWmPN2L6IAgfjxzRlWvXIXteFCGmPJ0L+IDgqCNSNq0bMV2PihD2jwIuA8jAuIldMoU1/mg+8Vbnu7EqIAgEk4kqLciarCdELrbs2fP6rsI3IJxAfESfJqQ5xf9+um7B9yCsQFB0NH1DerWYzsjdKdpaWn67gE3YHRAvOQvM2ep4thiX4Qzp0/Xdw24AU8EBHH9+nUVEx3NdkroHsMrVNR3DLgBzwTES9atWavCypVnOyd0hxs3bNB3C4QazwUE8ejRIzVuzFi2c8LQ26RhI32nQKjxZEC85OaNm9hu36UeO3pU3yUQSjwdEC85cfy4atW8BdtRYWh8r1cvfXdAKEFAvAKdQI0Hme7x9u3b+s6AUIGAYKCPtzFt27KdFgbPkcOH6zsCQgUCIg/OnD6tPv3oY7bzQuel50MgtCAgfODu3btq8oSJmB4NgmVLlbYO1sFWdO4AAeEntI4iulVrtnPDgts8qqlau3qNevr0qW5p4AYQEAWEpkgnT5ykIqpWYzs8zN+6tSPVjGnTVEpKim5V4DYQEAHgYHy8tflqePkK7ECAvxlRpaqaMG6c+vHHH3XrATeDgAgwNAMyYthwfLJ4xVoREdaMxMmEk7qVgBQQEA6SdPGiWjBvvrVbEu3ezA0eU+3UvoNaOH+BupR8SbcGkAgCIojEHzhgHUhM53qYFBj0Kj09uJ00YYLas3uPysrK0hUD6SAgQgh9D1+6ZIn6qE8f64EdN/jcaKP6Daxrnhcbq06cOKGrASaCgHAZtC/jurVr1djRY6yvJg3r1VeVKoaxA9Vpy5QoaX0yoOcHq1autBaOAW+BgBBEamqqSkpKUocPHVZbNm9WSxYvVlMnT1FfDhpsvdxEX12iGjdR9SIjrYektLArr68ypYoVt86koCMD6P8fMniwmjVjprUF/a2bN/VPBV4GAQEAsAUBAQCwBQEBgHBoOt0pEBAAAFsQEAAAWxAQAABbEBAAABuU+j/4javU1ug+CgAAAABJRU5ErkJggg==" alt=""></div><div class="title"><h2>داشبورد مدیریتی خروج مشتریان</h2><p>مرور سریع وضعیت خروج، دلایل اصلی و بازگشت مشتریان</p><p id="rowInfo" class="dataInfo"></p></div></div><div class="topActions"><div class="nav"><button class="active" data-tab="exit">تحلیل خروج مشتریان</button><button data-tab="offers">گزارش آفرها</button></div><div class="stamp">آخرین تاریخ دیتای بارگذاری‌شده: <b id="lastData">-</b><br>منبع: دیتابیس ناظر خروجی / Google Sheet</div></div></header><div class="filters"><div class="field multiField"><label>واحد</label><div id="fUnit" class="multiCombo" data-placeholder="همه واحدها"></div></div><div class="field multiField"><label>خوشه</label><div id="fCluster" class="multiCombo" data-placeholder="همه خوشه‌ها"></div></div><div class="field multiField"><label>هدف بررسی</label><div id="fQuestion" class="multiCombo" data-placeholder="همه اهداف بررسی"></div></div><div class="field multiField"><label>موضوعات</label><div id="fTopic" class="multiCombo" data-placeholder="همه موضوعات"></div></div><div class="field multiField"><label>کارگزاری مقصد</label><div id="fBroker" class="multiCombo" data-placeholder="همه کارگزاری‌ها"></div></div><div class="field multiField"><label>انتقال ۸۰٪</label><div id="fAsset" class="multiCombo" data-placeholder="همه وضعیت‌ها"></div></div><div class="field"><label>از تاریخ</label><div class="dateWrap"><input id="fFrom" placeholder="1404/01/01" inputmode="numeric"><button type="button" class="dateBtn" id="fFromBtn" aria-label="انتخاب تاریخ از تقویم">📅</button><input id="fFromPicker" class="dateNative" type="date"></div></div><div class="field"><label>تا تاریخ</label><div class="dateWrap"><input id="fTo" placeholder="1404/12/29" inputmode="numeric"><button type="button" class="dateBtn" id="fToBtn" aria-label="انتخاب تاریخ از تقویم">📅</button><input id="fToPicker" class="dateNative" type="date"></div></div><div class="actions"><button id="reset" class="ghost">پاک‌کردن فیلتر</button></div><div id="chartFilterChip" class="chartFilterChip"></div><div class="note">تاریخ‌ها شمسی هستند؛ مثل «1404/06/22» یا «22 شهریور». داده با Query کامل از شیت خوانده می‌شود تا فیلترهای دستی Google Sheet روی داشبورد اثر نگذارد.</div></div><section id="exit" class="tabs active"><div class="grid executiveGrid"><div class="card w12 kpiCard"><h3>◉ نتایج کلی مشارکت کاربران</h3><div id="exitKpis"></div></div><div class="card w12 priorityCard trendHeroCard"><h3>⌁ ترند خروج تعداد مشتریان - هفتگی</h3><div id="exitTrend" class="chart"></div></div><div class="card w6 priorityCard"><h3 id="goalByClusterTitle">▥ موضوعات هدف بررسی به تفکیک خوشه</h3><div class="chartModeControls"><label>مدل نمایش</label><select id="goalGroupMode"><option value="cluster">به تفکیک خوشه</option><option value="destBroker">به تفکیک کارگزاری مقصد</option></select></div><div id="reasonByCluster" class="chart"></div></div><div class="card w6 priorityCard"><h3>▤ بررسی پاسخ‌ها با تمرکز بر دلایل اصلی خروج</h3><div id="rootTable"></div></div><div class="card w4"><h3>▤ ترند فراوانی موضوعات</h3><div class="trendControls"><div id="fTrendTopic" class="multiCombo" data-placeholder="انتخاب موضوعات ترند"></div></div><div id="topReasonTrend" class="chart"></div></div><div class="card w3"><h3>▥ کارگزاری مقصد مشتریان به تفکیک خوشه</h3><div id="brokerByCluster" class="chart"></div></div><div class="card w5 clusterCard"><h3>◌ خوشه مشتریان</h3><div class="donutSplit"><div class="donutPanel"><div class="miniTitle">کل تماس‌ها</div><div id="clusterAll" class="chart"></div></div><div class="donutPanel"><div class="miniTitle">تماس موفق</div><div id="clusterSuccess" class="chart"></div></div></div></div><div class="card w3 compactInsight"><h3>◌ مشکلات تقاضای وجه از نگاه کاربران</h3><div id="cashIssue" class="chart"></div></div><div class="card w3 compactInsight"><h3>▤ سامانه نامحبوب از نگاه کاربران</h3><div id="unpopularSystem" class="chart"></div></div><div class="card w3 compactInsight"><h3>▥ دلایل نامحبوب بودن رابط کاربری سامانه معاملاتی</h3><div id="uiReasons" class="chart"></div></div><div class="card w3 compactInsight commentsCard"><h3>▦ نظرات کاربران درباره رابط کاربری سامانه معاملاتی</h3><div id="uiComments"></div></div><div class="card w7 fullTable"><h3>▦ شرح تمامی نظرات کاربران در نظرسنجی</h3><div id="allComments"></div></div><div class="card w5"><h3>▥ میانگین فاصله روزانه از تاریخ تغییر ناظر تا تماس به تفکیک نام رینگ</h3><div id="avgDelayByRing" class="chart"></div></div></div></section><section id="offers" class="tabs"><div class="grid executiveGrid"><div class="card w12 kpiCard"><h3>◉ نتایج کلی مشتریان از آغاز ارائه آفرها ۱۴۰۴/۰۶/۲۲</h3><div id="offerKpis"></div></div><div class="card w4"><h3>خدمات پیشنهاد داده شده</h3><div id="offerFreq" class="chart"></div></div><div class="card w4"><h3>▥ اعتبار هدیه پیشنهاد شده و فعال شده</h3><div id="giftPackages" class="chart"></div></div><div class="card w4"><h3>خدمات پیشنهاد شده به مشتریان برگشته</h3><div id="returnedOfferTags" class="chart"></div></div><div class="card w4"><h3>⌁ نتایج هفتگی سرمایه بازگشته: ناظر، آورده و جمع کل</h3><div id="avgCapitalByReturn" class="chart"></div></div><div class="card w4"><h3>⌁ روند هفتگی مبلغ خروج مشتریان</h3><div id="weeklyExitTrend" class="chart"></div></div><div class="card w4 capitalFlowCard"><h3>⌁ روند هفتگی ورود، خروج و اختلاف جریان سرمایه</h3><div id="weeklyCapitalFlow" class="chart"></div></div></div></section></main></div><script id="data" type="application/json">{"sheetBase":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTak4jOYhzIfljnnt5pKadfEGJTbalk1No3dPALy56m-iXMcVkIfyyfhhcM73VeSpX6nHPuIyRJwzl-/pub"}</script><script>
-window.__dashboardVersion='v140_weekly_charts_interactive_floating_filter';
+
+/* v141 - external update status controlled by Google Sheet checkbox */
+.externalUpdateBanner{
+  display:none;
+  width:100%;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 10px;
+  padding:10px 13px;
+  border:1px solid #F2C94C;
+  border-radius:12px;
+  background:linear-gradient(90deg,#FFF4C7,#FFFDF3);
+  color:#7A5200;
+  box-shadow:0 8px 22px rgba(122,82,0,.08);
+  font-size:12px;
+  line-height:1.7;
+}
+.externalUpdateBanner.visible{display:flex}
+.externalUpdateBanner .externalUpdateMain{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  min-width:0;
+}
+.externalUpdateBanner .externalUpdateIcon{
+  width:17px;
+  height:17px;
+  flex:0 0 17px;
+  border:2px solid rgba(122,82,0,.25);
+  border-top-color:#A66B00;
+  border-radius:50%;
+  animation:externalUpdateSpin .8s linear infinite;
+}
+.externalUpdateBanner .externalUpdateText{
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.externalUpdateBanner .externalUpdateMeta{
+  flex:0 0 auto;
+  font-size:10px;
+  opacity:.8;
+}
+.externalUpdateBanner.success{
+  border-color:#A9DFC0;
+  background:linear-gradient(90deg,#EAF9F0,#F8FFFA);
+  color:#176B3A;
+}
+.externalUpdateBanner.success .externalUpdateIcon{
+  border:0;
+  animation:none;
+  display:grid;
+  place-items:center;
+}
+.externalUpdateBanner.success .externalUpdateIcon::before{
+  content:'✓';
+  font-size:16px;
+  font-weight:900;
+}
+.externalUpdateBanner.warning{
+  border-color:#F2C94C;
+  background:linear-gradient(90deg,#FFF4C7,#FFFDF3);
+  color:#7A5200;
+}
+.externalUpdateBanner.warning .externalUpdateIcon{
+  border:0;
+  animation:none;
+  display:grid;
+  place-items:center;
+}
+.externalUpdateBanner.warning .externalUpdateIcon::before{
+  content:'!';
+  font-size:16px;
+  font-weight:900;
+}
+@keyframes externalUpdateSpin{to{transform:rotate(360deg)}}
+@media(max-width:640px){
+  .externalUpdateBanner{
+    align-items:flex-start;
+    padding:9px 10px;
+    font-size:11px;
+  }
+  .externalUpdateBanner .externalUpdateText{white-space:normal}
+  .externalUpdateBanner .externalUpdateMeta{display:none}
+}
+
+
+/* v142 - accordion version history */
+
+.versionSection{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px dashed #DCE6F0;
+}
+.versionSection ul{
+  margin:0;
+  padding:0 22px 0 0;
+}
+.versionSection li{
+  color:#26384A;
+  font-size:11.5px;
+  line-height:1.9;
+  margin:2px 0;
+}
+
+.versionHistoryIntro{
+  margin:0 0 12px;
+  color:#53677d;
+  font-size:12px;
+  line-height:1.8;
+}
+.versionAccordion{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+.versionItem{
+  border:1px solid #DCE6F0;
+  border-radius:13px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,84,154,.04);
+}
+.versionItem.open{
+  border-color:#AFCFE8;
+  box-shadow:0 8px 20px rgba(0,84,154,.08);
+}
+.versionToggle{
+  width:100%;
+  border:0;
+  background:#fff;
+  color:#0B2545;
+  padding:12px 14px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto 22px;
+  gap:10px;
+  align-items:center;
+  text-align:right;
+  font-family:Tahoma,Arial,sans-serif;
+  cursor:pointer;
+}
+.versionToggle:hover{background:#F7FBFF}
+.versionItem.open .versionToggle{
+  background:linear-gradient(180deg,#F4FAFF,#fff);
+  border-bottom:1px solid #E6EDF5;
+}
+.versionName{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  font-size:13px;
+  font-weight:800;
+}
+.versionCode{
+  display:inline-flex;
+  align-items:center;
+  direction:ltr;
+  color:#00549A;
+  background:#EAF5FE;
+  border:1px solid #C8E3F7;
+  border-radius:999px;
+  padding:3px 8px;
+  font-size:10px;
+  font-weight:800;
+}
+.versionDate{
+  color:#667085;
+  font-size:11px;
+  white-space:nowrap;
+}
+.versionChevron{
+  width:20px;
+  height:20px;
+  display:grid;
+  place-items:center;
+  color:#00549A;
+  font-size:16px;
+  transition:transform .18s ease;
+}
+.versionItem.open .versionChevron{transform:rotate(180deg)}
+.versionDetails{
+  display:none;
+  padding:12px 14px 14px;
+  background:#fff;
+}
+.versionItem.open .versionDetails{display:block}
+.versionSummary{
+  margin:0 0 10px;
+  color:#39457A;
+  font-size:11.5px;
+  line-height:1.8;
+  background:#F8FBFE;
+  border:1px solid #E7EEF5;
+  border-radius:10px;
+  padding:8px 10px;
+}
+
+@media(max-width:640px){
+  .versionToggle{
+    grid-template-columns:minmax(0,1fr) 20px;
+    padding:11px;
+  }
+  .versionDate{
+    grid-column:1/-1;
+    grid-row:2;
+    justify-self:start;
+    padding-right:0;
+  }
+  .versionChevron{
+    grid-column:2;
+    grid-row:1;
+  }
+  .versionDetails{padding:10px 11px 12px}
+  .versionName{font-size:12px}
+}
+
+</style></head><body class="executive-dashboard"><div class="app"><main class="main"><header class="executiveTop"><div class="brandBlock"><div class="heroIcon versionLogoBtn" role="button" tabindex="0" aria-label="نمایش تغییرات آخرین نسخه" title="نمایش تغییرات آخرین نسخه" onclick="openVersionModal()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVersionModal()}"><img src="data:image/png;base64,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" alt=""></div><div class="title"><h2>داشبورد مدیریتی خروج مشتریان</h2><p>مرور سریع وضعیت خروج، دلایل اصلی و بازگشت مشتریان</p><p id="rowInfo" class="dataInfo"></p></div></div><div class="topActions"><div class="nav"><button class="active" data-tab="exit">تحلیل خروج مشتریان</button><button data-tab="offers">گزارش آفرها</button></div><div class="stamp">آخرین تاریخ دیتای بارگذاری‌شده: <b id="lastData">-</b><br>منبع: دیتابیس ناظر خروجی / Google Sheet</div></div></header>
+<div id="externalUpdateBanner" class="externalUpdateBanner" role="status" aria-live="polite" aria-atomic="true">
+  <div class="externalUpdateMain">
+    <span class="externalUpdateIcon" aria-hidden="true"></span>
+    <span id="externalUpdateText" class="externalUpdateText">
+      اطلاعات داشبورد در حال به‌روزرسانی است؛ ممکن است اعداد موقتاً تغییر کنند.
+    </span>
+  </div>
+  <span id="externalUpdateMeta" class="externalUpdateMeta">کنترل از Google Sheet</span>
+</div>
+<div class="filters"><div class="field multiField"><label>واحد</label><div id="fUnit" class="multiCombo" data-placeholder="همه واحدها"></div></div><div class="field multiField"><label>خوشه</label><div id="fCluster" class="multiCombo" data-placeholder="همه خوشه‌ها"></div></div><div class="field multiField"><label>هدف بررسی</label><div id="fQuestion" class="multiCombo" data-placeholder="همه اهداف بررسی"></div></div><div class="field multiField"><label>موضوعات</label><div id="fTopic" class="multiCombo" data-placeholder="همه موضوعات"></div></div><div class="field multiField"><label>کارگزاری مقصد</label><div id="fBroker" class="multiCombo" data-placeholder="همه کارگزاری‌ها"></div></div><div class="field multiField"><label>انتقال ۸۰٪</label><div id="fAsset" class="multiCombo" data-placeholder="همه وضعیت‌ها"></div></div><div class="field"><label>از تاریخ</label><div class="dateWrap"><input id="fFrom" placeholder="1404/01/01" inputmode="numeric"><button type="button" class="dateBtn" id="fFromBtn" aria-label="انتخاب تاریخ از تقویم">📅</button><input id="fFromPicker" class="dateNative" type="date"></div></div><div class="field"><label>تا تاریخ</label><div class="dateWrap"><input id="fTo" placeholder="1404/12/29" inputmode="numeric"><button type="button" class="dateBtn" id="fToBtn" aria-label="انتخاب تاریخ از تقویم">📅</button><input id="fToPicker" class="dateNative" type="date"></div></div><div class="actions"><button id="reset" class="ghost">پاک‌کردن فیلتر</button></div><div id="chartFilterChip" class="chartFilterChip"></div><div class="note">تاریخ‌ها شمسی هستند؛ مثل «1404/06/22» یا «22 شهریور». داده با Query کامل از شیت خوانده می‌شود تا فیلترهای دستی Google Sheet روی داشبورد اثر نگذارد.</div></div><section id="exit" class="tabs active"><div class="grid executiveGrid"><div class="card w12 kpiCard"><h3>◉ نتایج کلی مشارکت کاربران</h3><div id="exitKpis"></div></div><div class="card w12 priorityCard trendHeroCard"><h3>⌁ ترند خروج تعداد مشتریان - هفتگی</h3><div id="exitTrend" class="chart"></div></div><div class="card w6 priorityCard"><h3 id="goalByClusterTitle">▥ موضوعات هدف بررسی به تفکیک خوشه</h3><div class="chartModeControls"><label>مدل نمایش</label><select id="goalGroupMode"><option value="cluster">به تفکیک خوشه</option><option value="destBroker">به تفکیک کارگزاری مقصد</option></select></div><div id="reasonByCluster" class="chart"></div></div><div class="card w6 priorityCard"><h3>▤ بررسی پاسخ‌ها با تمرکز بر دلایل اصلی خروج</h3><div id="rootTable"></div></div><div class="card w4"><h3>▤ ترند فراوانی موضوعات</h3><div class="trendControls"><div id="fTrendTopic" class="multiCombo" data-placeholder="انتخاب موضوعات ترند"></div></div><div id="topReasonTrend" class="chart"></div></div><div class="card w3"><h3>▥ کارگزاری مقصد مشتریان به تفکیک خوشه</h3><div id="brokerByCluster" class="chart"></div></div><div class="card w5 clusterCard"><h3>◌ خوشه مشتریان</h3><div class="donutSplit"><div class="donutPanel"><div class="miniTitle">کل تماس‌ها</div><div id="clusterAll" class="chart"></div></div><div class="donutPanel"><div class="miniTitle">تماس موفق</div><div id="clusterSuccess" class="chart"></div></div></div></div><div class="card w3 compactInsight"><h3>◌ مشکلات تقاضای وجه از نگاه کاربران</h3><div id="cashIssue" class="chart"></div></div><div class="card w3 compactInsight"><h3>▤ سامانه نامحبوب از نگاه کاربران</h3><div id="unpopularSystem" class="chart"></div></div><div class="card w3 compactInsight"><h3>▥ دلایل نامحبوب بودن رابط کاربری سامانه معاملاتی</h3><div id="uiReasons" class="chart"></div></div><div class="card w3 compactInsight commentsCard"><h3>▦ نظرات کاربران درباره رابط کاربری سامانه معاملاتی</h3><div id="uiComments"></div></div><div class="card w7 fullTable"><h3>▦ شرح تمامی نظرات کاربران در نظرسنجی</h3><div id="allComments"></div></div><div class="card w5"><h3>▥ میانگین فاصله روزانه از تاریخ تغییر ناظر تا تماس به تفکیک نام رینگ</h3><div id="avgDelayByRing" class="chart"></div></div></div></section><section id="offers" class="tabs"><div class="grid executiveGrid"><div class="card w12 kpiCard"><h3>◉ نتایج کلی مشتریان از آغاز ارائه آفرها ۱۴۰۴/۰۶/۲۲</h3><div id="offerKpis"></div></div><div class="card w4"><h3>خدمات پیشنهاد داده شده</h3><div id="offerFreq" class="chart"></div></div><div class="card w4"><h3>▥ اعتبار هدیه پیشنهاد شده و فعال شده</h3><div id="giftPackages" class="chart"></div></div><div class="card w4"><h3>خدمات پیشنهاد شده به مشتریان برگشته</h3><div id="returnedOfferTags" class="chart"></div></div><div class="card w4"><h3>⌁ نتایج هفتگی سرمایه بازگشته: ناظر، آورده و جمع کل</h3><div id="avgCapitalByReturn" class="chart"></div></div><div class="card w4"><h3>⌁ روند هفتگی مبلغ خروج مشتریان</h3><div id="weeklyExitTrend" class="chart"></div></div><div class="card w4 capitalFlowCard"><h3>⌁ روند هفتگی ورود، خروج و اختلاف جریان سرمایه</h3><div id="weeklyCapitalFlow" class="chart"></div></div></div></section></main></div><script id="data" type="application/json">{"sheetBase":"https://docs.google.com/spreadsheets/d/e/2PACX-1vTak4jOYhzIfljnnt5pKadfEGJTbalk1No3dPALy56m-iXMcVkIfyyfhhcM73VeSpX6nHPuIyRJwzl-/pub"}</script><script>
+window.__dashboardVersion='v141_google_sheet_update_checkbox';
 let DATA=Object.assign({calls:[],surveys:[],gifts:[],tags:[]}, JSON.parse(document.getElementById('data').textContent));
 const BACKUP_DATA=JSON.parse(JSON.stringify(DATA));
 const LIVE_SHEET_ID="1D98636kUZuIQW51hSLFXmoQn9-4ymi9mQFDSP_h4TKg";
@@ -2665,6 +2895,186 @@ function showLoadingPhase(message){
   if(stamp) stamp.innerHTML=message;
 }
 
+
+/* External update flag:
+   Google Sheet tab: تنظیمات داشبورد
+   Checkbox cell: B2
+*/
+const EXTERNAL_UPDATE_SHEET='انلاین بودن داشبورد';
+const EXTERNAL_UPDATE_CELL='B2';
+const EXTERNAL_UPDATE_POLL_MS=10000;
+
+let EXTERNAL_UPDATE_LAST_VALUE=null;
+let EXTERNAL_UPDATE_CHECKING=false;
+let EXTERNAL_UPDATE_REFRESHING=false;
+let EXTERNAL_UPDATE_HIDE_TIMER=null;
+
+function showExternalUpdateBanner(state,message,autoHideMs=0){
+  const box=document.getElementById('externalUpdateBanner');
+  const text=document.getElementById('externalUpdateText');
+  const meta=document.getElementById('externalUpdateMeta');
+  if(!box||!text||!meta) return;
+
+  if(EXTERNAL_UPDATE_HIDE_TIMER){
+    clearTimeout(EXTERNAL_UPDATE_HIDE_TIMER);
+    EXTERNAL_UPDATE_HIDE_TIMER=null;
+  }
+
+  box.className='externalUpdateBanner visible '+(state||'updating');
+  text.textContent=message;
+  meta.textContent='آخرین بررسی: '+new Date().toLocaleTimeString('fa-IR',{
+    hour:'2-digit',minute:'2-digit',second:'2-digit'
+  });
+
+  if(autoHideMs>0){
+    EXTERNAL_UPDATE_HIDE_TIMER=setTimeout(()=>{
+      box.classList.remove('visible');
+    },autoHideMs);
+  }
+}
+
+function hideExternalUpdateBanner(){
+  const box=document.getElementById('externalUpdateBanner');
+  if(box) box.classList.remove('visible');
+}
+
+function parseExternalUpdateFlag(value){
+  if(value===true || value===1) return true;
+  if(value===false || value===0 || value==null || value==='') return false;
+  const text=String(value).trim().toLowerCase();
+  return ['true','1','yes','on','checked','بله','فعال','در حال بروزرسانی','در حال به‌روزرسانی'].includes(text);
+}
+
+function gvizSingleCellJsonp(sheetName,cellRange){
+  const publishedBase=(DATA&&DATA.sheetBase?String(DATA.sheetBase):'')
+    .replace(/\/pub.*$/,'/gviz/tq')
+    .replace(/\/pub$/,'/gviz/tq');
+  const privateBase=`https://docs.google.com/spreadsheets/d/${LIVE_SHEET_ID}/gviz/tq`;
+
+  // برای سلول وضعیت، Spreadsheet ID خام در اولویت است تا تغییر Checkbox سریع‌تر دیده شود.
+  const bases=[privateBase,publishedBase].filter(Boolean);
+
+  const tryOne=(base)=>new Promise((resolve,reject)=>{
+    const cb='__gs_status_cb_'+Math.random().toString(36).slice(2);
+    let done=false;
+    let script;
+    let timer;
+
+    const cleanup=()=>{
+      try{delete window[cb]}catch(e){}
+      if(script&&script.parentNode) script.parentNode.removeChild(script);
+      if(timer) clearTimeout(timer);
+    };
+
+    window[cb]=res=>{
+      done=true;
+      cleanup();
+      resolve(res);
+    };
+
+    const url=new URL(base);
+    url.searchParams.set('tqx',`out:json;responseHandler:${cb}`);
+    url.searchParams.set('headers','0');
+    url.searchParams.set('range',cellRange);
+    url.searchParams.set('tq','select *');
+    url.searchParams.set('_status_cb',Date.now().toString());
+    url.searchParams.set('sheet',sheetName);
+
+    script=document.createElement('script');
+    script.src=url.toString();
+    script.onerror=()=>{
+      if(done) return;
+      cleanup();
+      reject(new Error('خواندن سلول وضعیت ناموفق بود'));
+    };
+    timer=setTimeout(()=>{
+      if(done) return;
+      cleanup();
+      reject(new Error('زمان خواندن سلول وضعیت تمام شد'));
+    },9000);
+
+    document.head.appendChild(script);
+  });
+
+  return bases.reduce(
+    (promise,base)=>promise.catch(()=>tryOne(base)),
+    Promise.reject(new Error('start'))
+  );
+}
+
+async function readExternalUpdateFlag(){
+  const response=await gvizSingleCellJsonp(EXTERNAL_UPDATE_SHEET,EXTERNAL_UPDATE_CELL);
+  const row=response&&response.table&&response.table.rows&&response.table.rows[0];
+  const cell=row&&row.c&&row.c[0];
+  const value=cell ? (cell.v!==undefined ? cell.v : cell.f) : false;
+  return parseExternalUpdateFlag(value);
+}
+
+async function reloadDashboardAfterSheetUpdate(){
+  if(EXTERNAL_UPDATE_REFRESHING) return;
+  EXTERNAL_UPDATE_REFRESHING=true;
+
+  showExternalUpdateBanner(
+    'success',
+    'به‌روزرسانی در Google Sheet تمام شد؛ در حال دریافت داده‌های نهایی داشبورد...'
+  );
+
+  try{
+    const live=await withTimeout(loadLiveSheets(),18000);
+    if(!live || live.calls.length+live.surveys.length+live.gifts.length<10){
+      throw new Error('داده کافی از Google Sheet برنگشت');
+    }
+    applyDashboardData(live,'Google Sheet زنده + یونیک تحلیل ها');
+    saveDashboardCache(live);
+    showExternalUpdateBanner(
+      'success',
+      'به‌روزرسانی تمام شد و آخرین داده‌ها روی داشبورد اعمال شدند.',
+      6000
+    );
+  }catch(error){
+    console.error('Refresh after external update failed:',error);
+    showExternalUpdateBanner(
+      'warning',
+      'تیک به‌روزرسانی برداشته شد، اما دریافت داده نهایی ناموفق بود؛ صفحه را یک‌بار تازه‌سازی کنید.'
+    );
+  }finally{
+    EXTERNAL_UPDATE_REFRESHING=false;
+  }
+}
+
+async function checkExternalUpdateStatus(){
+  if(EXTERNAL_UPDATE_CHECKING) return;
+  EXTERNAL_UPDATE_CHECKING=true;
+
+  try{
+    const isUpdating=await readExternalUpdateFlag();
+
+    if(isUpdating){
+      showExternalUpdateBanner(
+        'updating',
+        'اطلاعات داشبورد در حال به‌روزرسانی است؛ ممکن است اعداد تا پایان کار موقتاً تغییر کنند.'
+      );
+    }else if(EXTERNAL_UPDATE_LAST_VALUE===true){
+      // فقط هنگام تغییر واقعی از تیک‌دار به بدون تیک، داده نهایی دوباره خوانده می‌شود.
+      await reloadDashboardAfterSheetUpdate();
+    }else{
+      hideExternalUpdateBanner();
+    }
+
+    EXTERNAL_UPDATE_LAST_VALUE=isUpdating;
+  }catch(error){
+    // نبودن تب یا دسترسی نداشتن به سلول کنترلی نباید کار اصلی داشبورد را مختل کند.
+    console.warn('External update status check failed:',error);
+  }finally{
+    EXTERNAL_UPDATE_CHECKING=false;
+  }
+}
+
+function startExternalUpdateStatusPolling(){
+  checkExternalUpdateStatus();
+  setInterval(checkExternalUpdateStatus,EXTERNAL_UPDATE_POLL_MS);
+}
+
 const DASH_CACHE_KEY=`dashboard_cache_${LIVE_SHEET_ID}_v116_unique_analysis_root_table`;
 const DASH_CACHE_FALLBACK_KEYS=[DASH_CACHE_KEY];
 function saveDashboardCache(data){
@@ -2734,65 +3144,102 @@ async function boot(){
   }
 }
 
-window.__dashboardVersion="v116_unique_analysis_root_table_direct_edit";
+window.__dashboardVersion="v144_balanced_version_history";
 boot();
+startExternalUpdateStatusPolling();
 </script>
 <div id="versionModal" class="versionModalOverlay" aria-hidden="true" onclick="if(event.target===this){closeVersionModal()}">
   <section class="versionModal" role="dialog" aria-modal="true" aria-labelledby="versionModalTitle">
     <div class="versionModalHead">
       <div class="versionModalTitle">
-        <strong id="versionModalTitle">تغییرات آخرین نسخه داشبورد</strong>
-        <div class="versionModalMeta">تاریخ ثبت تغییرات: ۱۴۰۵/۰۴/۰۹ | نسخه: v139 / خروجی v13</div>
+        <strong id="versionModalTitle">تاریخچه نسخه‌های داشبورد</strong>
+        <div class="versionModalMeta">نسخه‌ها بر اساس تاریخ انتشار، از جدیدترین به قدیمی‌ترین نمایش داده شده‌اند.</div>
       </div>
       <button type="button" class="versionModalClose" onclick="closeVersionModal()" aria-label="بستن">×</button>
     </div>
+
     <div class="versionModalBody">
-      <div class="versionChangeGrid">
-        <div class="versionChangeGroup">
-          <h4>آفرها و اعتبار هدیه</h4>
-          <ul>
-            <li>اعداد کارت‌ها و نمودارهای اعتبار هدیه با هم هم‌راستا شدند.</li>
-            <li>شمارش اعتبار هدیه بر اساس مشتری یکتا انجام می‌شود.</li>
-            <li>اختلاف عددی بین تعداد نظرسنجی و تعداد اعتبار هدیه نمایش‌داده‌شده اصلاح شد.</li>
-            <li>نمودار اعتبار هدیه به دو حالت «بسته پیشنهاد شده» و «بسته فعال شده» تقسیم شد.</li>
-            <li>فیلتر کلیکی نمودار اعتبار هدیه متناسب با حالت انتخابی نمودار اعمال می‌شود.</li>
-          </ul>
-        </div>
-        <div class="versionChangeGroup">
-          <h4>گزارش آفرها و مشتریان برگشته</h4>
-          <ul>
-            <li>نمودار «خدمات پیشنهاد شده به مشتریان برگشته» اضافه شد.</li>
-            <li>عنوان نمودار «آفرهای پیشنهادشده به مشتریان برگشته» به «خدمات پیشنهاد شده به مشتریان برگشته» تغییر کرد.</li>
-            <li>نمودار روند هفتگی مبلغ خروج مشتریان اضافه شد.</li>
-            <li>نمودار روند هفتگی ورود، خروج و اختلاف جریان سرمایه اضافه شد.</li>
-            <li>سه نمودار هفتگی گزارش آفرها در یک ردیف و با چیدمان هم‌تراز قرار گرفتند.</li>
-          </ul>
-        </div>
-        <div class="versionChangeGroup">
-          <h4>چیدمان و خوانایی</h4>
-          <ul>
-            <li>نمودار میانگین فاصله روزانه از تاریخ تغییر ناظر تا تماس کنار جدول شرح نظرات قرار گرفت.</li>
-            <li>جدول شرح تمامی نظرات کاربران و نمودار فاصله تماس در یک ردیف نمایش داده می‌شوند.</li>
-            <li>برچسب‌های محور افقی نمودار سرمایه بازگشته مورب و خواناتر شدند.</li>
-            <li>تگ‌های خلاصه اضافی بالای نمودارهای هفتگی حذف شدند.</li>
-            <li>ارتفاع و فاصله چند نمودار برای کاهش فضای خالی و خوانایی بهتر تنظیم شد.</li>
-          </ul>
-        </div>
-        <div class="versionChangeGroup">
-          <h4>کارت‌ها، فیلترها و خطاهای نمایشی</h4>
-          <ul>
-            <li>عنوان کارت‌های اعتبار هدیه شفاف‌تر شد.</li>
-            <li>عددهای مرتبط با اعتبار هدیه در کارت‌ها، نمودارها و جدول‌ها با یک منطق واحد نمایش داده می‌شوند.</li>
-            <li>فیلترهای کلیکی نمودارها پایدارتر شدند.</li>
-            <li>پیام‌های خالی برخی نمودارها واضح‌تر شدند.</li>
-            <li>خطای نمایشی «mode is not defined» رفع شد.</li>
-          </ul>
-        </div>
+      <p class="versionHistoryIntro">
+        برای مشاهده جزئیات، روی نام هر نسخه کلیک کنید.
+      </p>
+
+      <div class="versionAccordion">
+
+        <article class="versionItem open">
+          <button type="button" class="versionToggle" aria-expanded="true" onclick="toggleVersionItem(this)">
+            <span class="versionName">
+              نسخه ۱۴ — کنترل وضعیت به‌روزرسانی داشبورد
+              <span class="versionCode">v141 / v14</span>
+            </span>
+            <span class="versionDate">۱۴۰۵/۰۴/۳۰</span>
+            <span class="versionChevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="versionDetails">
+            <p class="versionSummary">
+              اضافه شدن نوار اطلاع‌رسانی وضعیت به‌روزرسانی داشبورد.
+            </p>
+          </div>
+        </article>
+
+        <article class="versionItem">
+          <button type="button" class="versionToggle" aria-expanded="false" onclick="toggleVersionItem(this)">
+            <span class="versionName">
+              نسخه ۱۳ — بهبود گزارش آفرها و نمودارها
+              <span class="versionCode">v139 / v13</span>
+            </span>
+            <span class="versionDate">۱۴۰۵/۰۴/۰۹</span>
+            <span class="versionChevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="versionDetails">
+            <p class="versionSummary">
+              بهبود گزارش آفرها، نمودارهای هفتگی و چیدمان داشبورد.
+            </p>
+
+            <div class="versionSection">
+              <ul>
+                <li>هم‌راستا شدن اعداد کارت‌ها و نمودارهای اعتبار هدیه.</li>
+                <li>محاسبه تعداد اعتبار هدیه بر اساس مشتری یکتا.</li>
+                <li>اصلاح اختلاف عددی تعداد نظرسنجی و اعتبار هدیه.</li>
+                <li>تفکیک نمودار اعتبار هدیه به «بسته پیشنهاد شده» و «بسته فعال شده».</li>
+                <li>اضافه شدن نمودار خدمات پیشنهاد شده به مشتریان برگشته.</li>
+                <li>اصلاح عنوان نمودار آفرهای مشتریان برگشته.</li>
+                <li>اضافه شدن نمودار روند هفتگی مبلغ خروج مشتریان.</li>
+                <li>اضافه شدن نمودار هفتگی ورود، خروج و اختلاف جریان سرمایه.</li>
+                <li>قرار گرفتن سه نمودار هفتگی گزارش آفرها در یک ردیف.</li>
+                <li>بهبود جای‌گذاری جدول نظرات و نمودار فاصله تماس.</li>
+                <li>بهبود خوانایی برچسب‌های محور نمودار سرمایه بازگشته.</li>
+                <li>کاهش فضای خالی و اصلاح ارتفاع نمودارها.</li>
+                <li>بهبود پایداری فیلترهای کلیکی نمودارها.</li>
+                <li>شفاف‌تر شدن پیام‌های حالت بدون داده.</li>
+                <li>رفع خطای نمایشی «mode is not defined».</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 </div>
 <script>
+function toggleVersionItem(button){
+  const item=button.closest('.versionItem');
+  const accordion=button.closest('.versionAccordion');
+  if(!item||!accordion) return;
+
+  const wasOpen=item.classList.contains('open');
+
+  accordion.querySelectorAll('.versionItem').forEach(other=>{
+    other.classList.remove('open');
+    const otherButton=other.querySelector('.versionToggle');
+    if(otherButton) otherButton.setAttribute('aria-expanded','false');
+  });
+
+  if(!wasOpen){
+    item.classList.add('open');
+    button.setAttribute('aria-expanded','true');
+  }
+}
 function openVersionModal(){
   const modal=document.getElementById('versionModal');
   if(!modal) return;
